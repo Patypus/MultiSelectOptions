@@ -1,5 +1,3 @@
-# Object file
-*.o
-
-# Ada Library Information
-*.ali
+MultiSelects/MultiSelects/bin/*
+MultiSelects/MultiSelects/obj/*
+MultiSelects/packages/*
