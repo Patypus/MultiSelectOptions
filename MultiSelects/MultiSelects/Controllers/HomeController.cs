@@ -26,5 +26,10 @@ namespace MultiSelects.Controllers
 
             return View();
         }
+
+        public PartialViewResult Toolbar()
+        {
+            return PartialView();
+        }
     }
 }
