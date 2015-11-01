@@ -1,7 +1,28 @@
-﻿@{
+﻿@model MultiSelects.Models.VisitedLocationsDisplayViewModel
+@{
     ViewBag.Title = "Native";
 }
 
 <div>
     <span>Hey world</span>
 </div>
+
+@using (Html.BeginForm())
+{
+    Html.LabelFor(model => model.Message);
+    <div id="list-display">
+        <ul>
+            @foreach (var location in Model.AllLocations)
+            {
+                var id = "location-select-" + location.Id;
+                <li> 
+                    <input id="@id" value="@location.Id" type="checkbox" name="SelectedLocationIds">
+                    <span>@location.Name</span>
+                </li>
+            }
+        </ul>
+
+    </div>
+
+    <input type="submit" class="btn btn-primary"/>
+}

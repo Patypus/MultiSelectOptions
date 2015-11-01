@@ -8,7 +8,7 @@ namespace MultiSelects.DataLayer
 {
     public class ServerFacade
     {
-        public List<Location> GetAllLocations()
+        public static List<Location> GetAllLocations()
         {
             return new List<Location>
             {
