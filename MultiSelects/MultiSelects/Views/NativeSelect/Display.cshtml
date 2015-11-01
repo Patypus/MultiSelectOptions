@@ -11,17 +11,15 @@
 {
     Html.LabelFor(model => model.Message);
     <div id="list-display">
-        <ul>
             @foreach (var location in Model.AllLocations)
             {
                 var id = "location-select-" + location.Id;
-                <li> 
-                    <input id="@id" value="@location.Id" type="checkbox" name="SelectedLocationIds">
+                var checkedText = Model.SelectedLocationIds.Contains(location.Id) ? "checked=\"checked\"" : string.Empty;
+                <div id="list item"> 
+                    <input id="@id" value="@location.Id" type="checkbox" name="SelectedLocationIds" @checkedText>
                     <span>@location.Name</span>
-                </li>
+                </div>
             }
-        </ul>
-
     </div>
 
     <input type="submit" class="btn btn-primary"/>

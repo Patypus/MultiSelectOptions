@@ -19,10 +19,10 @@ namespace MultiSelects.DataLayer
                 new Location { Id = 5, Name = "Lille" },
                 new Location { Id = 6, Name = "Barcelona" },
                 new Location { Id = 7, Name = "Colonge" },
-                new Location { Id = 1, Name = "Athens" },
-                new Location { Id = 1, Name = "Istanbul" },
-                new Location { Id = 1, Name = "Mainz" },
-                new Location { Id = 1, Name = "London" }
+                new Location { Id = 8, Name = "Athens" },
+                new Location { Id = 9, Name = "Istanbul" },
+                new Location { Id = 10, Name = "Mainz" },
+                new Location { Id = 11, Name = "London" }
             };
         }
     }

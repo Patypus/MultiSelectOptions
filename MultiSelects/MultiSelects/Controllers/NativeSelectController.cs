@@ -11,15 +11,17 @@ namespace MultiSelects.Controllers
 {
     public class NativeSelectController : Controller
     {
-        public ViewResult Display(VisitedLocationsDisplayViewModel m)
+        public ViewResult Display(VisitedLocationsDisplayViewModel model)
         {
-            var locations = GetAllLocations();
-            var model = new VisitedLocationsDisplayViewModel
+            if (model.SelectedLocationIds == null)
             {
-                AllLocations = locations,
-                SelectedLocationIds = new List<int>(),
-                Message = Strings.SelectLocationsMessage
-            };
+                model.SelectedLocationIds = new List<int>();
+            }
+
+            var locations = GetAllLocations();
+            model.AllLocations = locations;
+            model.Message = Strings.SelectLocationsMessage;
+
             return View(model);
         }
     }
