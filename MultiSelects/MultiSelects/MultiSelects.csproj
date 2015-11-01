@@ -168,9 +168,11 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\NativeSelectController.cs" />
     <Compile Include="DataLayer\ServerFacade.cs" />
+    <Compile Include="Entities\Location.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\VisitedLocationsDisplayViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
@@ -214,8 +216,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Entities\" />
-    <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
